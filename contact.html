@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AIVATIKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-overlay"></div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="var(--accent)" stroke-width="2" fill="transparent"/>
+                    <path d="M12 6L6 12L12 18L18 12L12 6Z" fill="var(--accent)"/>
+                </svg>
+                <span>AIVATIKA</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <span class="lang-selector">EN</span>
+                <a href="demo.html" class="btn btn-primary">Book Demo ↗</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="reveal" style="padding-top: 8rem; padding-bottom: 4rem;">
+            <div class="contact-container">
+                <!-- Left Column -->
+                <div class="contact-info">
+                    <div class="badge green-badge" style="border-radius: 20px; font-weight: 600; align-self: flex-start; margin-bottom: 2rem;">// CONTACT</div>
+                    
+                    <h1 class="hero-title" style="letter-spacing: -0.04em; margin-bottom: 1.5rem;">
+                        Let's hire your<br>first <span class="text-accent">AI</span><br><span class="text-accent">teammate.</span>
+                    </h1>
+                    
+                    <p style="font-size: 1.125rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 4rem; max-width: 400px;">
+                        Tell us what you're building. We'll come back within one business day with a scoped pilot proposal.
+                    </p>
+                    
+                    <div class="contact-boxes">
+                        <!-- Email -->
+                        <div class="contact-box">
+                            <div class="cb-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div class="cb-label">EMAIL</div>
+                            <div class="cb-text">contact@aivatika.com</div>
+                        </div>
+                        
+                        <!-- Sales -->
+                        <div class="contact-box">
+                            <div class="cb-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="cb-label">SALES</div>
+                            <div class="cb-text">+1 (415) 555-0142</div>
+                        </div>
+
+                        <!-- HQ -->
+                        <div class="contact-box">
+                            <div class="cb-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff3366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div class="cb-label">HQ</div>
+                            <div class="cb-text">Bengaluru</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="contact-form">
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Transmission sent!');">
+                        <div class="form-group">
+                            <label for="name">YOUR NAME</label>
+                            <input type="text" id="name" required placeholder="Ada Lovelace">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">WORK EMAIL</label>
+                                <input type="email" id="email" required placeholder="ada@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">COMPANY</label>
+                                <input type="text" id="company" placeholder="Acme Inc.">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>I'M INTERESTED IN</label>
+                            <div class="pill-group">
+                                <div class="form-pill active">VOICE AGENTS</div>
+                                <div class="form-pill">CHAT AGENTS</div>
+                                <div class="form-pill">STUDIO</div>
+                                <div class="form-pill">MULTI-AGENT MESH</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">TELL US ABOUT THE WORKFLOW</label>
+                            <textarea id="message" required placeholder="We want to automate our tier-1 phone support in 3 languages..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary form-submit">
+                            Send transmission
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                        
+                        <div class="form-disclaimer">
+                            By submitting you agree to our terms. Zero-retention mode on request.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 4rem;">
+        <div class="footer-top">
+            <div class="footer-logo">AI<span class="text-accent">/</span>VATIKA</div>
+            <a href="demo.html" class="btn btn-primary">Start Building ↗</a>
+        </div>
+        
+        <div class="footer-middle">
+            <div class="footer-col">
+                <h4>EXPLORE</h4>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>PRODUCTS</h4>
+                <a href="#">Voice Agents</a>
+                <a href="#">Chat Agents</a>
+                <a href="#">Agent Studio</a>
+                <a href="#">Multi-Agent Mesh</a>
+            </div>
+            <div class="footer-col">
+                <h4>COMPANY</h4>
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+                <a href="#">Security</a>
+            </div>
+            <div class="footer-col">
+                <h4>CONTACT</h4>
+                <a href="mailto:contact@aivatika.com">contact@aivatika.com</a>
+                <br>
+                <span>Bengaluru</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">© 2026 AIVATIKA · ALL SIGNALS RESERVED</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

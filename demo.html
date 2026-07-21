@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Demo | AIVATIKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-overlay"></div>
+    <div class="glow-overlay" style="top: 10vh; right: 10vw; background: radial-gradient(ellipse at center, rgba(204, 255, 0, 0.1) 0%, transparent 70%);"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="var(--accent)" stroke-width="2" fill="transparent"/>
+                <path d="M12 6L6 12L12 18L18 12L12 6Z" fill="var(--accent)"/>
+            </svg>
+            <span>AIVATIKA</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <span class="lang-selector">EN</span>
+            <a href="demo.html" class="btn btn-primary" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); box-shadow: none;">Book Demo ↗</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="reveal">
+            <div class="contact-container" style="gap: 2rem;">
+                <div class="contact-info">
+                    <h2>Experience the <span class="text-accent">future.</span></h2>
+                    <p>Book a personalized walkthrough of the AIVATIKA platform, or try a simulated chat agent right here in the browser.</p>
+                    
+                    <div style="margin-top: 3rem;">
+                        <h3 style="margin-bottom: 1rem;">Schedule a Call</h3>
+                        <a href="mailto:sales@aivatika.com" class="btn btn-outline btn-large">Email Sales Team ↗</a>
+                    </div>
+                </div>
+
+                <!-- Interactive Sandbox UI -->
+                <div class="sandbox-container">
+                    <div class="sandbox-header">
+                        <div class="sandbox-dots">
+                            <div class="sandbox-dot"></div>
+                            <div class="sandbox-dot"></div>
+                            <div class="sandbox-dot"></div>
+                        </div>
+                        <span style="color: var(--text-secondary); font-size: 0.9rem; margin-left: 1rem;">AIVATIKA Support Agent // Online</span>
+                    </div>
+                    
+                    <div class="sandbox-body" id="chat-body">
+                        <div class="chat-message chat-bot">
+                            Hello! I'm an AIVATIKA demo agent. How can I help you understand our capabilities today?
+                        </div>
+                        <div class="chat-message chat-user">
+                            Can you handle multiple languages?
+                        </div>
+                        <div class="chat-message chat-bot">
+                            Yes! I can natively speak over 40 languages and code-switch in real-time between them without any noticeable latency. 
+                        </div>
+                    </div>
+
+                    <form class="sandbox-input" onsubmit="event.preventDefault();">
+                        <input type="text" placeholder="Type a message to test the agent..." id="demo-input">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 4rem;">
+        <div class="footer-top">
+            <div class="footer-logo">AI<span class="text-accent">/</span>VATIKA</div>
+            <a href="demo.html" class="btn btn-primary">Start Building ↗</a>
+        </div>
+        
+        <div class="footer-middle">
+            <div class="footer-col">
+                <h4>EXPLORE</h4>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>PRODUCTS</h4>
+                <a href="#">Voice Agents</a>
+                <a href="#">Chat Agents</a>
+                <a href="#">Agent Studio</a>
+                <a href="#">Multi-Agent Mesh</a>
+            </div>
+            <div class="footer-col">
+                <h4>COMPANY</h4>
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+                <a href="#">Security</a>
+            </div>
+            <div class="footer-col">
+                <h4>CONTACT</h4>
+                <a href="mailto:contact@aivatika.com">contact@aivatika.com</a>
+                <br>
+                <span>Bengaluru</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">© 2026 AIVATIKA · ALL SIGNALS RESERVED</div>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple chat interaction for the demo
+        document.querySelector('.sandbox-input').addEventListener('submit', function(e) {
+            const input = document.getElementById('demo-input');
+            const val = input.value.trim();
+            if(!val) return;
+            
+            const body = document.getElementById('chat-body');
+            
+            // Add user message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'chat-message chat-user';
+            userMsg.textContent = val;
+            body.appendChild(userMsg);
+            
+            input.value = '';
+            body.scrollTop = body.scrollHeight;
+
+            // Simulate bot typing
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'chat-message chat-bot';
+                botMsg.textContent = "I am a simulated demo interface. In a production environment, I would route this query to the appropriate LLM via the AIVATIKA orchestrator.";
+                body.appendChild(botMsg);
+                body.scrollTop = body.scrollHeight;
+            }, 1000);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
