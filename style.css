@@ -25,12 +25,130 @@ p { color: var(--text-secondary); }
 .text-accent-glow { color: var(--accent); text-shadow: 0 0 15px var(--accent-glow); }
 .navbar { position: sticky; top: 0; background: rgba(5,5,5,0.8); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 4rem; max-width: 1400px; margin: 0 auto; width: 100%; }
-.logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.25rem; letter-spacing: 0.05em; }
-.nav-links { display: flex; gap: 2.5rem; }
+.logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.25rem; letter-spacing: 0.05em; color: #ffffff; text-decoration: none; }
+.logo span { color: #ffffff; }
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
 .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
 .nav-links a:hover { color: var(--text-primary); }
 .nav-links a.active { color: var(--text-primary); position: relative; }
 .nav-links a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 2px; background-color: var(--accent); }
+
+/* ==========================================================================
+   Products Dropdown Component (Absolute Floating Panel - Pure CSS)
+   ========================================================================== */
+
+.products {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.products-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+}
+
+.products-btn:hover,
+.products:hover .products-btn {
+    color: var(--text-primary);
+}
+
+.products-btn svg {
+    transition: transform 0.25s ease;
+}
+
+.products:hover .products-btn svg {
+    transform: rotate(180deg);
+}
+
+.products-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    display: none;
+    z-index: 99999;
+    
+    background: #0D0F12;
+    border-radius: 18px;
+    border: 1px solid rgba(204, 255, 0, 0.15);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65);
+    padding: 0.75rem;
+}
+
+/* Invisible bridge so mouse hover never breaks when moving to menu */
+.products-menu::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+}
+
+.products:hover .products-menu {
+    display: block;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 0.85rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.product-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.product-item .title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.product-item:hover .title {
+    color: var(--accent);
+}
+
+.product-item .desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.15rem;
+}
+
+.demo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    background-color: var(--accent);
+    color: #000;
+    box-shadow: 0 0 20px rgba(204,255,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.demo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 25px rgba(204,255,0,0.4);
+}
 .nav-actions { display: flex; align-items: center; gap: 1.5rem; }
 .lang-selector { color: var(--text-tertiary); font-size: 0.9rem; font-weight: 500; }
 .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; border-radius: 999px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.3s ease; cursor: pointer; }
@@ -55,16 +173,17 @@ p { color: var(--text-secondary); }
 .stat-item .stat-label { font-size: 0.9rem; color: var(--text-secondary); }
 .hero-graphic { position: relative; width: 300px; height: 300px; }
 .orb-container { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
-.orb { width: 200px; height: 200px; border-radius: 50%; background: #0a0a0a url('https://unpkg.com/three-globe/example/img/earth-night.jpg') repeat-x center; background-size: cover; box-shadow: inset -20px -20px 40px rgba(0,0,0,0.9), inset 10px 10px 30px rgba(255,255,255,0.1), inset 0 0 20px rgba(204,255,0,0.2), 0 0 50px rgba(0,255,255,0.1), 0 0 20px rgba(204,255,0,0.1); position: relative; animation: float 6s ease-in-out infinite, spin-earth 30s linear infinite; }
+.orb { width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #1e293b 0%, #0a0a0a 70%); box-shadow: inset -20px -20px 40px rgba(0,0,0,0.9), inset 10px 10px 30px rgba(255,255,255,0.1), inset 0 0 20px rgba(204,255,0,0.2), 0 0 50px rgba(0,255,255,0.1), 0 0 20px rgba(204,255,0,0.1); position: relative; animation: float 6s ease-in-out infinite; }
 .floating-badge { position: absolute; bottom: 20px; left: -20px; background: rgba(15,15,15,0.9); border: 1px solid var(--border-color); padding: 0.75rem 1.25rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; backdrop-filter: blur(8px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); animation: float-delayed 5s ease-in-out infinite; z-index: 10; }
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 @keyframes float-delayed { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 @keyframes spin-earth { 0% { background-position: 0 0; } 100% { background-position: -400px 0; } }
+@keyframes spin-earth-slow { 0% { background-position: 0 0; } 100% { background-position: -200% 0; } }
 .client-ticker-container { margin-top: 6rem; padding: 3rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); overflow: hidden; background: linear-gradient(90deg, var(--bg-dark) 0%, transparent 10%, transparent 90%, var(--bg-dark) 100%); position: relative; }
 .ticker-wrapper { display: flex; width: fit-content; }
 .ticker-content { display: flex; align-items: center; gap: 4rem; padding-right: 4rem; animation: scroll 30s linear infinite; }
-.client-logo { display: flex; align-items: center; gap: 0.75rem; font-size: 1.25rem; font-weight: 700; color: var(--text-secondary); letter-spacing: 0.1em; }
+.client-logo { display: flex; align-items: center; gap: 0.75rem; font-size: 1.25rem; font-weight: 700; color: var(--text-secondary); letter-spacing: 0.1em; white-space: nowrap; }
 .client-logo svg { color: var(--accent); }
 @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 section { padding: 8rem 4rem; max-width: 1400px; margin: 0 auto; }
@@ -82,8 +201,21 @@ section { padding: 8rem 4rem; max-width: 1400px; margin: 0 auto; }
 .stat-huge { font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 600; color: var(--accent); line-height: 1; margin-bottom: 1rem; text-shadow: 0 0 30px rgba(204,255,0,0.15); }
 .stat-desc { font-size: 1.1rem; color: var(--text-secondary); }
 .workflow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.workflow-card { background-color: transparent; border-top: 1px solid var(--border-color); padding-top: 2.5rem; }
-.workflow-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; }
+.workflow-card { 
+    background-color: var(--bg-card); 
+    border: 1px solid var(--border-color); 
+    border-radius: 20px; 
+    padding: 2.5rem; 
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.workflow-card:hover {
+    background-color: var(--bg-card-hover);
+    border-color: rgba(204, 255, 0, 0.3);
+    transform: translateY(-5px);
+}
+.workflow-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
 .step-num { font-size: 1rem; font-weight: 600; color: var(--text-tertiary); }
 .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .testimonial-card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; }

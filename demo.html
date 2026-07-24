@@ -13,25 +13,69 @@
     <div class="grid-overlay"></div>
     <div class="glow-overlay" style="top: 10vh; right: 10vw; background: radial-gradient(ellipse at center, rgba(204, 255, 0, 0.1) 0%, transparent 70%);"></div>
 
-    <header class="navbar">
-        <div class="logo">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="var(--accent)" stroke-width="2" fill="transparent"/>
-                <path d="M12 6L6 12L12 18L18 12L12 6Z" fill="var(--accent)"/>
-            </svg>
-            <span>AIVATIKA</span>
+<header class="navbar">
+  <div class="nav-container">
+
+    <a class="logo" href="index.html">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="var(--accent)" stroke-width="2" fill="transparent"/>
+        <path d="M12 6L6 12L12 18L18 12L12 6Z" fill="var(--accent)"/>
+      </svg>
+      <span>AIVATIKA</span>
+    </a>
+
+    <nav class="nav-links">
+
+      <a href="index.html">Home</a>
+
+      <div class="products">
+
+        <button class="products-btn">
+          Products
+          <svg width="14" height="14" viewBox="0 0 24 24">
+            <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </button>
+
+        <div class="products-menu">
+
+          <a href="https://examscalendar.com/" target="_blank" rel="noopener noreferrer" class="product-item">
+            <div class="title">ExamsCalendar</div>
+            <div class="desc">
+              It helps you in exam preparation
+            </div>
+          </a>
+
+          <a href="chat-automation.html" class="product-item">
+            <div class="title">WhatsApp Bot</div>
+            <div class="desc">
+              Automate customer interactions
+            </div>
+          </a>
+
+          <a href="contact.html" class="product-item">
+            <div class="title">Pixtall</div>
+            <div class="desc">
+              Generate advertisement images with AI
+            </div>
+          </a>
+
         </div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="solutions.html">Solutions</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="nav-actions">
-            <span class="lang-selector">EN</span>
-            <a href="demo.html" class="btn btn-primary" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); box-shadow: none;">Book Demo ↗</a>
-        </div>
-    </header>
+
+      </div>
+
+      <a href="solutions.html">Solutions</a>
+
+      <a href="contact.html">Contact</a>
+
+    </nav>
+
+    <a class="demo-btn" href="contact.html">
+      Contact us ↗
+    </a>
+
+  </div>
+</header>
 
     <main>
         <section class="reveal">
@@ -81,14 +125,12 @@
     <footer style="margin-top: 4rem;">
         <div class="footer-top">
             <div class="footer-logo">AI<span class="text-accent">/</span>VATIKA</div>
-            <a href="demo.html" class="btn btn-primary">Start Building ↗</a>
         </div>
         
         <div class="footer-middle">
             <div class="footer-col">
                 <h4>EXPLORE</h4>
                 <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
                 <a href="solutions.html">Solutions</a>
                 <a href="contact.html">Contact</a>
             </div>

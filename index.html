@@ -14,24 +14,67 @@
     <div class="glow-overlay"></div>
 
     <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="var(--accent)" stroke-width="2" fill="transparent"/>
-                    <path d="M12 6L6 12L12 18L18 12L12 6Z" fill="var(--accent)"/>
-                </svg>
-                <span>AIVATIKA</span>
+      <div class="nav-container">
+
+        <a class="logo" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="var(--accent)" stroke-width="2" fill="transparent"/>
+            <path d="M12 6L6 12L12 18L18 12L12 6Z" fill="var(--accent)"/>
+          </svg>
+          <span>AIVATIKA</span>
+        </a>
+
+        <nav class="nav-links">
+
+          <a href="index.html" class="active">Home</a>
+
+          <div class="products">
+
+            <button class="products-btn">
+              Products
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+            </button>
+
+            <div class="products-menu">
+
+              <a href="https://examscalendar.com/" target="_blank" rel="noopener noreferrer" class="product-item">
+                <div class="title">ExamsCalendar</div>
+                <div class="desc">
+                  It helps you in exam preparation
+                </div>
+              </a>
+
+              <a href="chat-automation.html" class="product-item">
+                <div class="title">WhatsApp Bot</div>
+                <div class="desc">
+                  Automate customer interactions
+                </div>
+              </a>
+
+              <a href="contact.html" class="product-item">
+                <div class="title">Pixtall</div>
+                <div class="desc">
+                  Generate advertisement images with AI
+                </div>
+              </a>
+
             </div>
-            <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="products.html">Products</a>
-                <a href="solutions.html">Solutions</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <div class="nav-actions">
-                <a href="demo.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; color: #000; font-weight: 700;">Book Demo ↗</a>
-            </div>
-        </div>
+
+          </div>
+
+          <a href="solutions.html">Solutions</a>
+
+          <a href="contact.html">Contact</a>
+
+        </nav>
+
+        <a class="demo-btn" href="contact.html">
+          Contact us ↗
+        </a>
+
+      </div>
     </header>
 
     <main>
@@ -39,21 +82,19 @@
             <div class="hero-main-layout">
                 <div class="hero-left">
                     <h1 class="hero-title">
-                        AI automation,<br>
-                        made <span class="italic text-white">simple.</span><br>
                         We build the agents that<br>
                         <span style="font-weight: 700; background: linear-gradient(90deg, #CCFF00 0%, #33ff99 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">run your business.</span>
                     </h1>
 
                     <p class="hero-description">
-                        AIVATIKA builds intelligent chat and invoice automation agents that handle conversations, process documents, and coordinate work — around the clock — so your team doesn't have to. No code, no complexity, just <span class="text-accent-glow">results that run themselves.</span>
+                        Intelligent chat and invoice automation agents that process documents, handle customer conversations, and coordinate workflows 24/7.
                     </p>
 
                     <div class="hero-cta">
-                        <a href="demo.html" class="btn btn-primary btn-large" style="color: #000; font-weight: 700;">See how it works ↗</a>
-                        <a href="products.html" class="btn btn-outline btn-large">See products →</a>
+                        <a href="contact.html" class="btn btn-primary btn-large" style="color: #000; font-weight: 700;">Contact us ↗</a>
                     </div>
 
+                    <!-- Stored in backend / code memory for future use:
                     <div class="hero-stats" style="margin-top: 2rem;">
                         <div class="stat-item">
                             <h3 class="stat-value">94%</h3>
@@ -68,22 +109,24 @@
                             <p class="stat-label">Code required to deploy</p>
                         </div>
                     </div>
+                    -->
                 </div>
 
                 <div class="hero-right">
                     <div class="hero-graphic" style="width: 380px; height: 380px; margin-left: auto;">
                         <div class="orb-container" style="width: 100%; height: 100%; position: relative;">
                             <div class="floating-badge" style="top: 12%; left: -10%; bottom:auto;">
-                                <span style="color: var(--accent);">●</span> LIVE · 340 CHATS
+                                <span style="color: var(--accent);">●</span> LIVE · WhatsApp Bot
                             </div>
 
-                            <div class="orb" style="width: 100%; height: 100%; box-shadow: inset -10px -10px 30px rgba(0,0,0,0.8), inset 10px 10px 30px rgba(255,255,255,0.05), 0 0 60px rgba(204,255,0,0.12);">
-                                <div style="position: absolute; width: 120%; height: 120%; top:-10%; left:-10%; border-radius: 50%; border: 1px dashed rgba(204,255,0,0.15); animation: rotate 30s linear infinite;"></div>
-                                <div style="position: absolute; width: 140%; height: 140%; top:-20%; left:-20%; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05);"></div>
+                            <div style="position: absolute; width: 120%; height: 120%; top:-10%; left:-10%; border-radius: 50%; border: 1.5px dashed rgba(204,255,0,0.3); animation: rotate 30s linear infinite; pointer-events: none; z-index: 1;"></div>
+                            <div style="position: absolute; width: 145%; height: 145%; top:-22.5%; left:-22.5%; border-radius: 50%; border: 1px solid rgba(204,255,0,0.15); pointer-events: none; z-index: 1;"></div>
+                            <div class="orb" style="width: 100%; height: 100%; position: relative; border-radius: 50%; overflow: hidden; box-shadow: inset -10px -10px 30px rgba(0,0,0,0.8), inset 10px 10px 30px rgba(255,255,255,0.05), 0 0 60px rgba(204,255,0,0.12);">
+                                <img src="assets/earth-globe.png" alt="Earth Globe" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
                             </div>
 
                             <div class="floating-badge" style="bottom: 10%; right: -12%; left: auto;">
-                                <span style="color: var(--accent);">✓</span> 1,200 INVOICES · 99%
+                                <span style="color: var(--accent);">▼</span> LIVE · Pixtall
                             </div>
                         </div>
                     </div>
@@ -93,72 +136,54 @@
             <div class="client-ticker-container">
                 <div class="ticker-wrapper">
                     <div class="ticker-content">
-                        <div class="client-logo">AUREUS</div>
-                        <div class="client-logo">HELIX</div>
-                        <div class="client-logo">ORBITAL</div>
-                        <div class="client-logo">NIMBUS</div>
-                        <div class="client-logo">FLOWSTATE</div>
-                        <div class="client-logo">LEDGERLY</div>
+                        <div class="client-logo">INTELLIGENT CHAT AUTOMATION</div>
+                        <div class="client-logo">PIXTALL</div>
+                        <div class="client-logo">EXAMSCALENDAR</div>
+                        <div class="client-logo">INVOICE AUTOMATION</div>
+                        <div class="client-logo">WHATSAPP HEALTH CARE AUTOMATION</div>
                     </div>
                     <div class="ticker-content">
-                        <div class="client-logo">AUREUS</div>
-                        <div class="client-logo">HELIX</div>
-                        <div class="client-logo">ORBITAL</div>
-                        <div class="client-logo">NIMBUS</div>
-                        <div class="client-logo">FLOWSTATE</div>
-                        <div class="client-logo">LEDGERLY</div>
+                        <div class="client-logo">INTELLIGENT CHAT AUTOMATION</div>
+                        <div class="client-logo">PIXTALL</div>
+                        <div class="client-logo">EXAMSCALENDAR</div>
+                        <div class="client-logo">INVOICE AUTOMATION</div>
+                        <div class="client-logo">WHATSAPP HEALTH CARE AUTOMATION</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="capabilities reveal active">
-            <div class="section-badge">// CAPABILITIES</div>
-            <h2 class="section-title">An operating system for <span class="italic">effortless automation.</span></h2>
+            <div class="section-badge">// PRODUCTS</div>
+            <h2 class="section-title">AI products built for <span class="italic">modern execution.</span></h2>
 
             <div class="bento-grid">
                 <div class="bento-card bento-large">
                     <div class="card-glow"></div>
                     <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <h3>ExamsCalendar</h3>
+                    <p>It helps you in exam preparation. Stay ahead with intelligent scheduling, real-time alerts, and comprehensive exam tracking automated for students and institutions.</p>
+                    <div class="card-tags">
+                        <span>EXAM PREP</span><span>SCHEDULING</span><span>ALERTS</span><span>AUTOMATION</span>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                     </div>
-                    <h3>Chat automation that actually resolves issues</h3>
-                    <p>One brain across WhatsApp, web, Slack and email — with persistent memory, tool use and CRM context, so conversations get closed instead of transferred.</p>
-                    <div class="card-tags">
-                        <span>WHATSAPP</span><span>WEB</span><span>SLACK</span><span>EMAIL</span>
-                    </div>
+                    <h3>WhatsApp Bot</h3>
+                    <p>Automate customer interactions 24/7. Handle customer conversations, resolve queries instantly, and coordinate workflows directly over WhatsApp.</p>
                 </div>
 
                 <div class="bento-card">
                     <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><path d="M8 9h8M8 13h8M8 17h5"></path></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                     </div>
-                    <h3>Invoice automation, zero manual entry</h3>
-                    <p>Extraction, matching and approvals handled end to end — no more re-keying line items by hand.</p>
-                </div>
-
-                <div class="bento-card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-                    </div>
-                    <h3>No code, no complexity</h3>
-                    <p>Your team launches and edits workflows themselves — no engineers required, no waiting on sprints.</p>
-                </div>
-
-                <div class="bento-card">
-                    <div class="card-icon" style="stroke: #FF3366;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
-                    </div>
-                    <h3>Any LLM, any brain</h3>
-                    <p>Route between GPT, Claude, Gemini or fine-tuned models per task, per cost, per compliance need.</p>
-                </div>
-
-                <div class="bento-card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                    </div>
-                    <h3>24 / 7 / 365</h3>
-                    <p>Agents that never sleep, never miss a message, and never fall behind on a queue.</p>
+                    <h3>Pixtall</h3>
+                    <p>Generate advertisement images with AI. Create studio-quality marketing visual assets and banners in seconds without design bottlenecks.</p>
                 </div>
             </div>
         </section>
@@ -195,7 +220,7 @@
                         </div>
                     </div>
                     <h3>Model your workflow</h3>
-                    <p>Upload chats, invoices, SOPs. Our studio turns them into a live agent — no engineering required.</p>
+                    <p>Upload chats, invoices, and SOPs. Our studio transforms them into autonomous agents with zero engineering required.</p>
                 </div>
 
                 <div class="workflow-card">
@@ -206,7 +231,7 @@
                         </div>
                     </div>
                     <h3>Test before it goes live</h3>
-                    <p>Real conversations and real documents run through the agent before your customers ever see it.</p>
+                    <p>Simulate real customer interactions and document extraction in a sandbox before launching to production.</p>
                 </div>
 
                 <div class="workflow-card">
@@ -217,46 +242,16 @@
                         </div>
                     </div>
                     <h3>Deploy everywhere</h3>
-                    <p>One agent — WhatsApp, web, Slack, email, invoicing. Observed live from day one.</p>
+                    <p>Connect your agent seamlessly across WhatsApp, Web, Slack, Email, and ERP systems with real-time telemetry.</p>
                 </div>
             </div>
         </section>
 
-        <section class="signals reveal active">
-            <div class="section-badge">// SIGNALS</div>
-            <h2 class="section-title">Teams love automation that <span class="italic">just works.</span></h2>
-
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="quote">"Our chat agent resolved 94% of support tickets without a human touching them. Customers couldn't tell the difference."</p>
-                    <div class="author-info">
-                        <div class="author-name">Priya Menon</div>
-                        <div class="author-title">Head of Support · Helix Health</div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="quote">"Invoice processing that took three days now takes twenty minutes. We reinvested the savings into the team."</p>
-                    <div class="author-info">
-                        <div class="author-name">Diego Ramos</div>
-                        <div class="author-title">COO · Orbital Cargo</div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="quote">"No engineers needed. Our ops team built and deployed the whole workflow themselves in under a week."</p>
-                    <div class="author-info">
-                        <div class="author-name">Ada Okafor</div>
-                        <div class="author-title">Operations Lead · Nimbus Retail</div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="cta-section reveal active">
             <div class="cta-container">
                 <h2>Give your business AI automation<br>that <span class="text-accent">never clocks out.</span></h2>
-                <a href="demo.html" class="btn btn-primary btn-large">Book a 15-min demo ↗</a>
+                <a href="contact.html" class="btn btn-primary btn-large">Contact us ↗</a>
             </div>
         </section>
     </main>
@@ -264,14 +259,12 @@
     <footer>
         <div class="footer-top">
             <div class="footer-logo">AI<span class="text-accent">/</span>VATIKA</div>
-            <a href="demo.html" class="btn btn-primary">Start Building ↗</a>
         </div>
 
         <div class="footer-middle">
             <div class="footer-col">
                 <h4>EXPLORE</h4>
                 <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
                 <a href="solutions.html">Solutions</a>
                 <a href="contact.html">Contact</a>
             </div>
