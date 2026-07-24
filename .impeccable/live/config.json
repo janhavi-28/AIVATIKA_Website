@@ -1,0 +1,13 @@
+{
+  "files": [
+    "index.html",
+    "solutions.html",
+    "chat-automation.html",
+    "invoice-automation.html",
+    "contact.html",
+    "demo.html"
+  ],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}
